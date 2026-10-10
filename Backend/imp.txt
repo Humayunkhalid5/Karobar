@@ -1,0 +1,6 @@
+fetch('http://localhost:8000/api/demo/seed', {
+  method: 'POST',
+  headers: {
+    'Authorization': 'Bearer ' + JSON.parse(localStorage.getItem('sb-ixbzwbehruuaachimvxx-auth-token')).access_token
+  }
+})

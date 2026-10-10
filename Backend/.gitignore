@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# Environment / secrets
+.env
+
+# Database
+*.db
+*.sqlite3
+
+# Uploaded receipt images (keep the folder, ignore contents)
+uploads/*
+!uploads/.gitkeep
+
+# OS / editor
+.DS_Store
+Thumbs.db

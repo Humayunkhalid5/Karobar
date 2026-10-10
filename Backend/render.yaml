@@ -1,0 +1,25 @@
+# Render blueprint for the Karobaar AI backend (Alibaba Cloud AI Hackathon Pakistan 2026).
+# Note: the free plan has an ephemeral disk — the SQLite ledger is re-seeded on
+# each deploy (AUTO_SEED=true). For persistent data attach a disk or move to a
+# managed Postgres by setting DATABASE_URL.
+services:
+  - type: web
+    name: karobaar-ai-backend
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12.6"
+      - key: AI_PROVIDER
+        value: auto
+      - key: GROQ_API_KEY
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: AUTO_SEED
+        value: "true"
+      - key: CORS_ORIGINS
+        sync: false

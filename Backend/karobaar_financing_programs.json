@@ -1,0 +1,230 @@
+{
+  "dataset_name": "Karobaar AI Financing Programs",
+  "version": "1.0.0",
+  "currency": "PKR",
+  "money_storage_unit": "paisa",
+  "last_updated": "2026-09-04",
+  "purpose": "Curated financing-program dataset used by Karobaar AI to compare verified merchant business evidence against published or manually checked financing requirements.",
+  "disclaimer": "Karobaar AI does not approve loans, guarantee eligibility, perform underwriting, or generate a credit score. Program matches only indicate that recorded business evidence appears to satisfy selected requirements. Final eligibility is determined by the financing provider.",
+  "supported_requirement_types": {
+    "manual": {
+      "description": "A requirement that Karobaar AI cannot determine reliably from the merchant ledger and must be confirmed by the user or financing provider."
+    },
+    "metric": {
+      "description": "A requirement that can be compared deterministically against a metric derived from verified Karobaar business records."
+    }
+  },
+  "supported_metrics": {
+    "history_months": {
+      "label": "Recorded business history",
+      "unit": "months",
+      "description": "Number of months of verified business activity recorded in Karobaar AI."
+    },
+    "avg_monthly_sales_paisa": {
+      "label": "Average monthly sales",
+      "unit": "paisa",
+      "description": "Average monthly verified sales calculated from the merchant ledger."
+    },
+    "evidence_coverage_pct": {
+      "label": "Supporting evidence coverage",
+      "unit": "percent",
+      "description": "Percentage of verified transactions that include supporting evidence such as receipts."
+    }
+  },
+  "matching_logic": {
+    "metric_requirement": "For metric requirements, compare the merchant metric with the configured operator and threshold value.",
+    "manual_requirement": "Manual requirements are never automatically marked as satisfied unless the merchant or an authorized verification process explicitly confirms them.",
+    "status_values": [
+      "matched",
+      "missing",
+      "manual_check_required",
+      "insufficient_data"
+    ],
+    "recommended_user_language": {
+      "matched": "Your recorded business data appears to meet this requirement.",
+      "missing": "Your recorded business data currently appears below this requirement.",
+      "manual_check_required": "This requirement needs to be confirmed manually.",
+      "insufficient_data": "Karobaar does not yet have enough verified data to evaluate this requirement."
+    },
+    "prohibited_claims": [
+      "You are approved.",
+      "You are guaranteed to receive this loan.",
+      "You are definitely eligible.",
+      "Your credit score qualifies you."
+    ]
+  },
+  "programs": [
+    {
+      "id": "pm-youth-business-agri-loan",
+      "program_name": "PM Youth Business & Agriculture Loan Scheme",
+      "provider": "Government of Pakistan",
+      "target_user": "Young entrepreneurs and small business owners (aged 21-45)",
+      "purpose": "Concessional financing to start or expand a small business",
+      "loan_range": "PKR 0.5M - 7.5M (tier-based)",
+      "source_url": "https://www.pmybanks.pmo.gov.pk/",
+      "last_verified": "2026-08-30",
+      "requirements": [
+        {
+          "id": "age",
+          "label": "Applicant age between 21 and 45 years",
+          "type": "manual",
+          "next_step": "Confirm your age matches the published range before applying."
+        },
+        {
+          "id": "cnic",
+          "label": "Valid CNIC (Computerized National Identity Card)",
+          "type": "manual",
+          "next_step": "Keep a scanned copy of your CNIC ready."
+        },
+        {
+          "id": "no-default",
+          "label": "No default history with any bank",
+          "type": "manual",
+          "next_step": "Check your banking record before applying."
+        },
+        {
+          "id": "history",
+          "label": "At least 6 months of ongoing business activity",
+          "type": "metric",
+          "metric": "history_months",
+          "op": ">=",
+          "value": 6,
+          "display": "6 months",
+          "next_step": "Keep recording your business activity in Karobaar to build a longer verified history."
+        }
+      ]
+    },
+    {
+      "id": "akhuwat-microfinance",
+      "program_name": "Akhuwat Islamic Microfinance (Qarz-e-Hasna)",
+      "provider": "Akhuwat Foundation",
+      "target_user": "Micro-entrepreneurs with small or home-based businesses",
+      "purpose": "Interest-free loans (Qarz-e-Hasna) for small business needs",
+      "loan_range": "PKR 10,000 - 100,000 (typical first loan)",
+      "source_url": "https://akhuwat.org.pk/",
+      "last_verified": "2026-08-30",
+      "requirements": [
+        {
+          "id": "cnic",
+          "label": "Valid CNIC",
+          "type": "manual",
+          "next_step": "Keep a scanned copy of your CNIC ready."
+        },
+        {
+          "id": "guarantor",
+          "label": "One local guarantor",
+          "type": "manual",
+          "next_step": "Arrange a guarantor from your area."
+        },
+        {
+          "id": "history",
+          "label": "At least 2 months of active business",
+          "type": "metric",
+          "metric": "history_months",
+          "op": ">=",
+          "value": 2,
+          "display": "2 months"
+        },
+        {
+          "id": "sales",
+          "label": "Average monthly sales of at least PKR 50,000",
+          "type": "metric",
+          "metric": "avg_monthly_sales_paisa",
+          "op": ">=",
+          "value": 5000000,
+          "display": "PKR 50,000"
+        }
+      ]
+    },
+    {
+      "id": "bok-sme-term-finance",
+      "program_name": "Bank of Khyber SME Term Finance",
+      "provider": "Bank of Khyber",
+      "target_user": "Established small and medium enterprises",
+      "purpose": "Term financing for business expansion and machinery",
+      "loan_range": "PKR 1M - 25M (published range)",
+      "source_url": "https://www.bok.com.pk/",
+      "last_verified": "2026-08-30",
+      "requirements": [
+        {
+          "id": "registration",
+          "label": "Business registration documents (NTN / registration certificate)",
+          "type": "manual",
+          "next_step": "Register your business with FBR / the relevant authority and keep documents ready."
+        },
+        {
+          "id": "cnic",
+          "label": "Valid CNIC of the business owner",
+          "type": "manual",
+          "next_step": "Keep a scanned copy of your CNIC ready."
+        },
+        {
+          "id": "sales",
+          "label": "Average monthly sales of at least PKR 500,000",
+          "type": "metric",
+          "metric": "avg_monthly_sales_paisa",
+          "op": ">=",
+          "value": 50000000,
+          "display": "PKR 500,000",
+          "next_step": "Your recorded average monthly sales currently appear below this threshold — keep recording to grow the verified figure."
+        },
+        {
+          "id": "history",
+          "label": "At least 12 months of business track record",
+          "type": "metric",
+          "metric": "history_months",
+          "op": ">=",
+          "value": 12,
+          "display": "12 months",
+          "next_step": "Keep recording business activity to build a 12-month verified history."
+        }
+      ]
+    },
+    {
+      "id": "kashf-micro-enterprise-loan",
+      "program_name": "Kashf Foundation Micro-Enterprise Loan",
+      "provider": "Kashf Foundation",
+      "target_user": "Women entrepreneurs and small home-based businesses (men via group loans)",
+      "purpose": "Micro-enterprise loans for working capital and small expansion",
+      "loan_range": "PKR 30,000 - 300,000 (typical range)",
+      "source_url": "https://kashf.org.pk/",
+      "last_verified": "2026-08-30",
+      "requirements": [
+        {
+          "id": "cnic",
+          "label": "Valid CNIC",
+          "type": "manual",
+          "next_step": "Keep a scanned copy of your CNIC ready."
+        },
+        {
+          "id": "history",
+          "label": "At least 2 months of active business",
+          "type": "metric",
+          "metric": "history_months",
+          "op": ">=",
+          "value": 2,
+          "display": "2 months"
+        },
+        {
+          "id": "sales",
+          "label": "Average monthly sales of at least PKR 150,000",
+          "type": "metric",
+          "metric": "avg_monthly_sales_paisa",
+          "op": ">=",
+          "value": 15000000,
+          "display": "PKR 150,000"
+        },
+        {
+          "id": "documentation",
+          "label": "At least 20% of transactions with supporting evidence (receipts)",
+          "type": "metric",
+          "metric": "evidence_coverage_pct",
+          "op": ">=",
+          "value": 20,
+          "display": "20%",
+          "next_step": "Scan and record more receipts so at least 20% of your transactions have supporting evidence."
+        }
+      ]
+    }
+  ]
+}

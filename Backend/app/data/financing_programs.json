@@ -1,0 +1,286 @@
+[
+  {
+    "id": "pm-youth-business-agri-loan",
+    "program_name": "PM Youth Business & Agriculture Loan Scheme",
+    "provider": "Government of Pakistan / participating banks",
+    "target_user": "Pakistani residents aged 21-45; minimum age 18 for IT and e-commerce businesses",
+    "purpose": "Concessional financing for startups, existing businesses, and agriculture",
+    "loan_range": "Tier 1: PKR 0.5M at 0%; Tier 2: PKR 0.5M-1.5M at 5%; Tier 3: PKR 1.5M-7.5M at 7%",
+    "source_url": "https://pmybals.pmyp.gov.pk/",
+    "last_verified": "2026-09-04",
+    "requirements": [
+      {
+        "id": "age",
+        "label": "Applicant age is 21-45 years, or at least 18 for an IT/e-commerce business",
+        "type": "manual",
+        "next_step": "Confirm the applicant's age and business category before applying."
+      },
+      {
+        "id": "cnic",
+        "label": "Pakistani resident with a valid CNIC",
+        "type": "manual",
+        "next_step": "Keep a valid CNIC and a clear scanned copy ready."
+      },
+      {
+        "id": "no-default",
+        "label": "No default history with any bank",
+        "type": "manual",
+        "next_step": "Check your banking record before applying."
+      },
+      {
+        "id": "history",
+        "label": "At least 6 months of ongoing business activity",
+        "type": "metric",
+        "metric": "history_months",
+        "op": ">=",
+        "value": 6,
+        "display": "6 months",
+        "next_step": "Keep recording your business activity in Karobaar to build a longer verified history."
+      },
+      {
+        "id": "sales",
+        "label": "Average monthly sales of at least PKR 100,000",
+        "type": "metric",
+        "metric": "avg_monthly_sales_paisa",
+        "op": ">=",
+        "value": 10000000,
+        "display": "PKR 100,000",
+        "next_step": "Your recorded average monthly sales currently appear below this threshold — keep recording to grow the verified figure."
+      }
+    ]
+  },
+  {
+    "id": "akhuwat-family-enterprise-loan",
+    "program_name": "Akhuwat Family Enterprise Loan",
+    "provider": "Akhuwat Islamic Microfinance",
+    "target_user": "People establishing a new micro-business or expanding an existing small business",
+    "purpose": "Interest-free micro-enterprise financing for business establishment or expansion",
+    "loan_range": "PKR 10,000-50,000; duration 10-36 months; initial application fee up to PKR 500",
+    "source_url": "https://akhuwat.org.pk/programs/loan/products",
+    "last_verified": "2026-09-04",
+    "requirements": [
+      {
+        "id": "cnic",
+        "label": "Valid CNIC — application is made through an Akhuwat branch",
+        "type": "manual",
+        "next_step": "Locate the nearest Akhuwat branch and keep a scanned CNIC copy ready."
+      },
+      {
+        "id": "guarantor",
+        "label": "One local guarantor required by the branch",
+        "type": "manual",
+        "next_step": "Arrange a guarantor from your area before visiting the branch."
+      },
+      {
+        "id": "history",
+        "label": "At least 2 months of active business",
+        "type": "metric",
+        "metric": "history_months",
+        "op": ">=",
+        "value": 2,
+        "display": "2 months",
+        "next_step": "Keep recording business activity to build a 2-month verified history."
+      },
+      {
+        "id": "sales",
+        "label": "Average monthly sales of at least PKR 50,000",
+        "type": "metric",
+        "metric": "avg_monthly_sales_paisa",
+        "op": ">=",
+        "value": 5000000,
+        "display": "PKR 50,000",
+        "next_step": "Your recorded average monthly sales currently appear below this threshold — keep recording to grow the verified figure."
+      }
+    ]
+  },
+  {
+    "id": "bop-e-business-qarza",
+    "program_name": "BOP e-Business Qarza",
+    "provider": "The Bank of Punjab",
+    "target_user": "SME customers aged 21-60 with at least one year of banking relationship with BOP",
+    "purpose": "Digital working-capital running finance for selected existing BOP customers",
+    "loan_range": "PKR 0.1M-3.5M; one-year revolving facility; 1-year KIBOR + 9.99% per annum",
+    "source_url": "https://www.bop.com.pk/BOPEBusinessQarza",
+    "last_verified": "2026-09-04",
+    "requirements": [
+      {
+        "id": "age",
+        "label": "Applicant age between 21 and 60 years",
+        "type": "manual",
+        "next_step": "Confirm the applicant's age before requesting a digital application."
+      },
+      {
+        "id": "bop-relationship",
+        "label": "At least one year of banking relationship with BOP",
+        "type": "manual",
+        "next_step": "Confirm the BOP relationship period and whether the bank has selected the customer."
+      },
+      {
+        "id": "dbr",
+        "label": "Debt burden ratio must not exceed 40%",
+        "type": "manual",
+        "next_step": "Have BOP calculate the official debt burden ratio from verified obligations."
+      },
+      {
+        "id": "history",
+        "label": "At least 12 months of business track record",
+        "type": "metric",
+        "metric": "history_months",
+        "op": ">=",
+        "value": 12,
+        "display": "12 months",
+        "next_step": "Keep recording business activity to build a 12-month verified history."
+      },
+      {
+        "id": "sales",
+        "label": "Average monthly sales of at least PKR 200,000",
+        "type": "metric",
+        "metric": "avg_monthly_sales_paisa",
+        "op": ">=",
+        "value": 20000000,
+        "display": "PKR 200,000",
+        "next_step": "Your recorded average monthly sales currently appear below this threshold — keep recording to grow the verified figure."
+      },
+      {
+        "id": "documentation",
+        "label": "At least 15% of transactions with supporting evidence (receipts)",
+        "type": "metric",
+        "metric": "evidence_coverage_pct",
+        "op": ">=",
+        "value": 15,
+        "display": "15%",
+        "next_step": "Scan and record more receipts so at least 15% of your transactions have supporting evidence."
+      }
+    ]
+  },
+  {
+    "id": "hbl-small-business-finance",
+    "program_name": "HBL Small Business Finance",
+    "provider": "Habib Bank Limited",
+    "target_user": "Resident Pakistani business owners aged 25-65 with at least three years in operation",
+    "purpose": "Working capital, guarantees, letters of credit, and business expansion",
+    "loan_range": "Up to PKR 20M, secured by acceptable residential, commercial, or industrial real estate",
+    "source_url": "https://www.hbl.com/business/sme-banking/sme-banking/hbl-small-business-finance",
+    "last_verified": "2026-09-04",
+    "requirements": [
+      {
+        "id": "age",
+        "label": "Sponsor, mortgagor, or borrower is a resident Pakistani aged 25-65",
+        "type": "manual",
+        "next_step": "Confirm age and residency and keep CNIC copies ready."
+      },
+      {
+        "id": "property-security",
+        "label": "Acceptable real estate is required as mortgage security",
+        "type": "manual",
+        "next_step": "Prepare property title, tax, valuation, and legal-vetting documents."
+      },
+      {
+        "id": "bank-statement",
+        "label": "Certified bank statement for the last year",
+        "type": "manual",
+        "next_step": "Obtain a certified 12-month bank statement."
+      },
+      {
+        "id": "history",
+        "label": "Business has operated for at least 36 months",
+        "type": "metric",
+        "metric": "history_months",
+        "op": ">=",
+        "value": 36,
+        "display": "36 months",
+        "next_step": "Keep dated business records that demonstrate at least three years of operation."
+      },
+      {
+        "id": "sales",
+        "label": "Average monthly sales of at least PKR 500,000",
+        "type": "metric",
+        "metric": "avg_monthly_sales_paisa",
+        "op": ">=",
+        "value": 50000000,
+        "display": "PKR 500,000",
+        "next_step": "Your recorded average monthly sales currently appear below this threshold — keep recording to grow the verified figure."
+      },
+      {
+        "id": "documentation",
+        "label": "At least 25% of transactions with supporting evidence (receipts)",
+        "type": "metric",
+        "metric": "evidence_coverage_pct",
+        "op": ">=",
+        "value": 25,
+        "display": "25%",
+        "next_step": "Scan and record more receipts so at least 25% of your transactions have supporting evidence."
+      },
+      {
+        "id": "recovery",
+        "label": "Recovery rate of at least 50% on tracked udhaar",
+        "type": "metric",
+        "metric": "recovery_rate_pct",
+        "op": ">=",
+        "value": 50,
+        "display": "50%",
+        "next_step": "Record more payment-received entries to improve your udhaar recovery rate."
+      }
+    ]
+  },
+  {
+    "id": "meezan-islamic-sme-asaan-finance",
+    "program_name": "Meezan Islamic SME Asaan Finance (I-SAAF)",
+    "provider": "Meezan Bank / State Bank of Pakistan",
+    "target_user": "New or existing SMEs that are not current borrowers of Meezan Bank",
+    "purpose": "Shariah-compliant working capital or term finance for equipment, machinery, vehicles, or property",
+    "loan_range": "Up to PKR 10M at a published 9% per annum",
+    "source_url": "https://www.meezanbank.com/sme-banking/",
+    "last_verified": "2026-09-04",
+    "requirements": [
+      {
+        "id": "new-borrower",
+        "label": "Applicant is not a current Meezan Bank borrower and uses the facility through one bank only",
+        "type": "manual",
+        "next_step": "Confirm current borrowing relationships before applying."
+      },
+      {
+        "id": "cnic",
+        "label": "CNIC copies of proprietor, partners, or directors",
+        "type": "manual",
+        "next_step": "Prepare clear CNIC copies for the relevant business owners."
+      },
+      {
+        "id": "financial-records",
+        "label": "Last three years of accounts, stock report, ageing of receivables, and six-month bank statement",
+        "type": "manual",
+        "next_step": "Compile the financial records listed on Meezan Bank's SME page."
+      },
+      {
+        "id": "history",
+        "label": "At least 12 months of business track record",
+        "type": "metric",
+        "metric": "history_months",
+        "op": ">=",
+        "value": 12,
+        "display": "12 months",
+        "next_step": "Keep recording business activity to build a 12-month verified history."
+      },
+      {
+        "id": "sales",
+        "label": "Average monthly sales of at least PKR 300,000",
+        "type": "metric",
+        "metric": "avg_monthly_sales_paisa",
+        "op": ">=",
+        "value": 30000000,
+        "display": "PKR 300,000",
+        "next_step": "Your recorded average monthly sales currently appear below this threshold — keep recording to grow the verified figure."
+      },
+      {
+        "id": "documentation",
+        "label": "At least 20% of transactions with supporting evidence (receipts)",
+        "type": "metric",
+        "metric": "evidence_coverage_pct",
+        "op": ">=",
+        "value": 20,
+        "display": "20%",
+        "next_step": "Scan and record more receipts so at least 20% of your transactions have supporting evidence."
+      }
+    ]
+  }
+]

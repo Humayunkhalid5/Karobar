@@ -1,0 +1,252 @@
+[
+  {
+    "id": "pm-youth-business-agri-loan",
+    "program_name": "PM Youth Business & Agriculture Loan Scheme",
+    "provider": "Government of Pakistan / participating banks",
+    "target_user": "Pakistani residents aged 21-45; minimum age 18 for IT and e-commerce businesses",
+    "purpose": "Concessional financing for startups, existing businesses, and agriculture",
+    "loan_range": "Tier 1: PKR 0.5M at 0%; Tier 2: above PKR 0.5M to 1.5M at 5%; Tier 3: above PKR 1.5M to 7.5M at 7%",
+    "source_url": "https://pmybals.pmyp.gov.pk/",
+    "last_verified": "2026-09-04",
+    "requirements": [
+      {
+        "id": "age",
+        "label": "Applicant age is 21-45 years, or at least 18 for an IT/e-commerce business",
+        "type": "manual",
+        "next_step": "Confirm the applicant's age and business category before applying."
+      },
+      {
+        "id": "cnic",
+        "label": "Pakistani resident with a valid CNIC",
+        "type": "manual",
+        "next_step": "Keep a valid CNIC and a clear scanned copy ready."
+      },
+      {
+        "id": "application",
+        "label": "Application must be submitted through the official online portal",
+        "type": "manual",
+        "next_step": "Prepare the business information required by the portal before starting the application."
+      },
+      {
+        "id": "business-ownership",
+        "label": "Startups and existing SMEs owned by eligible youth may apply, including agriculture businesses",
+        "type": "manual",
+        "next_step": "Confirm that the eligible applicant owns the business or qualifies through the partnership or company structure."
+      },
+      {
+        "id": "financing-purpose",
+        "label": "Financing may cover development, working capital, production, machinery, equipment, or eligible locally manufactured vehicles",
+        "type": "manual",
+        "next_step": "Select the financing purpose and prepare a cost estimate or supplier quotation."
+      },
+      {
+        "id": "bank-review",
+        "label": "Security, documents, and final approval are subject to the participating bank",
+        "type": "manual",
+        "next_step": "Ask the selected participating bank for its current document and security checklist."
+      }
+    ]
+  },
+  {
+    "id": "akhuwat-family-enterprise-loan",
+    "program_name": "Akhuwat Family Enterprise Loan",
+    "provider": "Akhuwat Islamic Microfinance",
+    "target_user": "People establishing a new micro-business or expanding an existing small business",
+    "purpose": "Interest-free micro-enterprise financing for business establishment or expansion",
+    "loan_range": "PKR 10,000-50,000; duration 10-36 months; initial application fee up to PKR 500",
+    "source_url": "https://akhuwat.org.pk/programs/loan/products",
+    "last_verified": "2026-09-04",
+    "requirements": [
+      {
+        "id": "branch-application",
+        "label": "Application is made through an Akhuwat branch; loans are not offered online",
+        "type": "manual",
+        "next_step": "Locate the nearest Akhuwat branch and apply in person."
+      },
+      {
+        "id": "business-purpose",
+        "label": "Funds are for establishing a new business or expanding an existing one",
+        "type": "manual",
+        "next_step": "Prepare a short explanation of the business and the intended use of funds."
+      },
+      {
+        "id": "branch-appraisal",
+        "label": "Identity and appraisal documents are confirmed by the branch",
+        "type": "manual",
+        "next_step": "Ask the branch for its current application and appraisal checklist."
+      },
+      {
+        "id": "duration-and-fee",
+        "label": "Published duration is 10-36 months and the initial application fee is up to PKR 500",
+        "type": "manual",
+        "next_step": "Confirm the offered duration, installment schedule, and exact fee at the branch."
+      }
+    ]
+  },
+  {
+    "id": "bop-e-business-qarza",
+    "program_name": "BOP e-Business Qarza",
+    "provider": "The Bank of Punjab",
+    "target_user": "SME customers aged 21-60 with at least one year of banking relationship with BOP",
+    "purpose": "Digital working-capital running finance for selected existing BOP customers",
+    "loan_range": "PKR 0.1M-3.5M; one-year revolving facility; 1-year KIBOR + 9.99% per annum",
+    "source_url": "https://www.bop.com.pk/BOPEBusinessQarza",
+    "last_verified": "2026-09-04",
+    "requirements": [
+      {
+        "id": "age",
+        "label": "Applicant age between 21 and 60 years",
+        "type": "manual",
+        "next_step": "Confirm the applicant's age before requesting a digital application."
+      },
+      {
+        "id": "bop-relationship",
+        "label": "At least one year of banking relationship with BOP",
+        "type": "manual",
+        "next_step": "Confirm the BOP relationship period and whether the bank has selected the customer."
+      },
+      {
+        "id": "digital-invitation",
+        "label": "Application is submitted through a digital link shared by BOP with selected customers",
+        "type": "manual",
+        "next_step": "Request confirmation from BOP that the customer is eligible to receive the application link."
+      },
+      {
+        "id": "personal-guarantee",
+        "label": "Personal guarantee of the borrower",
+        "type": "manual",
+        "next_step": "Ask BOP for the current personal-guarantee documentation."
+      },
+      {
+        "id": "dbr",
+        "label": "Debt burden ratio must not exceed 40%",
+        "type": "manual",
+        "next_step": "Have BOP calculate the official debt burden ratio from verified obligations."
+      },
+      {
+        "id": "repayment",
+        "label": "Monthly markup is due at month-end and is charged on the utilized amount",
+        "type": "manual",
+        "next_step": "Review the expected monthly markup and maintain enough balance before each due date."
+      },
+      {
+        "id": "fees",
+        "label": "Published processing fee is PKR 9,500 including FED; published late-payment charge is PKR 2,000 including FED per overdue month",
+        "type": "manual",
+        "next_step": "Confirm the latest schedule of charges with BOP before accepting the facility."
+      }
+    ]
+  },
+  {
+    "id": "hbl-small-business-finance",
+    "program_name": "HBL Small Business Finance",
+    "provider": "Habib Bank Limited",
+    "target_user": "Resident Pakistani business owners aged 25-65 with at least three years in operation",
+    "purpose": "Working capital, guarantees, letters of credit, and business expansion",
+    "loan_range": "Up to PKR 20M, secured by acceptable residential, commercial, or industrial real estate",
+    "source_url": "https://www.hbl.com/business/sme-banking/sme-banking/hbl-small-business-finance",
+    "last_verified": "2026-09-04",
+    "requirements": [
+      {
+        "id": "age",
+        "label": "Sponsor, mortgagor, or borrower is a resident Pakistani aged 25-65",
+        "type": "manual",
+        "next_step": "Confirm age and residency and keep CNIC copies ready."
+      },
+      {
+        "id": "history",
+        "label": "Business has operated for at least 36 months",
+        "type": "metric",
+        "metric": "history_months",
+        "op": ">=",
+        "value": 36,
+        "display": "36 months",
+        "next_step": "Keep dated business records that demonstrate at least three years of operation."
+      },
+      {
+        "id": "property-security",
+        "label": "Acceptable real estate is required as mortgage security",
+        "type": "manual",
+        "next_step": "Prepare property title, tax, valuation, and legal-vetting documents."
+      },
+      {
+        "id": "bank-statement",
+        "label": "Certified bank statement for the last year",
+        "type": "manual",
+        "next_step": "Obtain a certified 12-month bank statement."
+      },
+      {
+        "id": "identity-and-business-documents",
+        "label": "CNIC, application form, photographs, utility bill, business data, and business constitution documents",
+        "type": "manual",
+        "next_step": "Prepare the identity and business documents listed by HBL for the applicable ownership structure."
+      },
+      {
+        "id": "property-documents",
+        "label": "Property title, tax receipts, collateral evaluation, and legal vetting are required",
+        "type": "manual",
+        "next_step": "Collect current title and tax records for the property offered as security."
+      },
+      {
+        "id": "facility-tenor",
+        "label": "Running Finance is on demand; Demand Finance and Letter of Guarantee are up to three years; Letter of Credit is up to 180 days",
+        "type": "manual",
+        "next_step": "Choose the facility that matches the business need and confirm its repayment schedule with HBL."
+      },
+      {
+        "id": "pricing",
+        "label": "Running Finance uses three-month average asking KIBOR plus spread; Demand Finance uses one-year average asking KIBOR plus spread",
+        "type": "manual",
+        "next_step": "Request a written quotation showing the current KIBOR, bank spread, fees, and total repayment cost."
+      }
+    ]
+  },
+  {
+    "id": "meezan-islamic-sme-asaan-finance",
+    "program_name": "Meezan Islamic SME Asaan Finance (I-SAAF)",
+    "provider": "Meezan Bank / State Bank of Pakistan",
+    "target_user": "New or existing SMEs that are not current borrowers of Meezan Bank",
+    "purpose": "Shariah-compliant working capital or term finance for equipment, machinery, vehicles, or property",
+    "loan_range": "Up to PKR 10M at a published 9% per annum",
+    "source_url": "https://www.meezanbank.com/sme-banking/",
+    "last_verified": "2026-09-04",
+    "requirements": [
+      {
+        "id": "new-borrower",
+        "label": "Applicant is not a current Meezan Bank borrower and uses the facility through one bank only",
+        "type": "manual",
+        "next_step": "Confirm current borrowing relationships before applying."
+      },
+      {
+        "id": "financing-type",
+        "label": "Facility is available as term finance or a working-capital line",
+        "type": "manual",
+        "next_step": "Choose between working capital and long-term asset financing based on the intended use."
+      },
+      {
+        "id": "cnic",
+        "label": "CNIC copies of proprietor, partners, or directors",
+        "type": "manual",
+        "next_step": "Prepare clear CNIC copies for the relevant business owners."
+      },
+      {
+        "id": "financial-records",
+        "label": "Last three years of accounts, stock report, ageing of receivables, and six-month bank statement for a small enterprise",
+        "type": "manual",
+        "next_step": "Compile the financial records listed on Meezan Bank's SME page."
+      },
+      {
+        "id": "business-documents",
+        "label": "Company profile, financing request, borrower fact sheet, personal net-worth statement, and constitutional documents where applicable",
+        "type": "manual",
+        "next_step": "Prepare the documents for the business's legal structure and have required forms signed and stamped."
+      },
+      {
+        "id": "security",
+        "label": "Collateral or security is assessed under Meezan Bank's internal policy",
+        "type": "manual",
+        "next_step": "Ask the bank to confirm security requirements for the requested facility."
+      }
+    ]
+  }
+]
