@@ -18,9 +18,18 @@ from app.db import SessionLocal, engine, init_db
 from app.errors import AIUnavailableError, DomainValidationError, KarobaarError, NotFoundError
 from app.models import BusinessEvent
 from app.routers import ALL_ROUTERS
+from fastapi.middleware.cors import CORSMiddleware
 
 logger = logging.getLogger(__name__)
+origins = [o.strip() for o in os.getenv("CORS_ORIGINS", "").split(",") if o.strip()]
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins or ["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 async def _warmup_db_pool():
     """Background task: establish one warm connection in the pool at startup.
